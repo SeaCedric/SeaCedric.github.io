@@ -18,7 +18,7 @@
         }
     
         .section {
-            padding: 60px 0;
+            padding: 80px 0;
         }
     
         .profile-img {
@@ -30,6 +30,11 @@
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
             border: 4px solid white;
         }
+
+        .card img {
+            border-bottom: 1px solid #eee;
+        }
+
     </style>
     
 </head>
@@ -99,11 +104,43 @@
 <div class="container section">
     <h2 class="mb-4">Projets</h2>
 
-    <div class="mb-4">
-        <h4>📊 Analyse de l’impact des promotions</h4>
-        <p>Étude de l’effet des promotions sur le chiffre d’affaires et le comportement client.</p>
-        <a href="https://github.com/SeaCedric/projet-promo" target="_blank">Voir le projet</a>
+    <div class="container section">
+        <h2 class="mb-5">Selected Projects</h2>
+    
+        <!-- PROJECTS -->
+<div class="container section">
+    <h2 class="mb-5">Selected Projects</h2>
+
+    <div class="card shadow-sm mb-5 overflow-hidden">
+
+        <img src="images/project-operations-2025.png"
+             alt="Weekly Delivery Performance 2025"
+             class="img-fluid">
+    
+        <div class="p-4">
+    
+            <h4 class="mb-3">🚚 Operational Performance & Logistics Optimization</h4>
+    
+            <p><strong>Context:</strong> Multi-city food delivery operations handling millions of orders.</p>
+    
+            <p><strong>Challenge:</strong> Reduce delivery delays, improve driver utilization and optimize dispatch allocation.</p>
+    
+            <p><strong>Stack:</strong> SQL • Python • MongoDB • Metabase</p>
+    
+            <a href="https://github.com/SeaCedric/operational-performance-optimization" 
+               target="_blank" 
+               class="btn btn-outline-dark btn-sm mt-2">
+               View on GitHub
+            </a>
+    
+        </div>
     </div>
+    
+
+</div>
+    
+    </div>
+    
 
     <div class="mb-4">
         <h4>📉 Analyse churn client</h4>
