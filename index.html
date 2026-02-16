@@ -112,6 +112,18 @@
             transform: translateY(0);
         }
 
+        /* Limit hero text width for better readability */
+        .hero-text {
+            max-width: 560px;
+        }
+
+        /* Improve spacing on mobile */
+        @media (max-width: 768px) {
+            .hero-text {
+                max-width: 100%;
+            }
+        }
+
     </style>
 </head>
 
@@ -129,49 +141,52 @@
         </div>
 
         <div class="col-md-7">
-            <h1 class="fw-bold mb-2">Cédric Blanes</h1>
+            <div class="hero-text">
+        
+                <h1 class="fw-bold mb-2">Cédric Blanes</h1>
+        
+                <h3 class="mb-3 text-muted">
+                    Business & Data Analytics Engineer
+                </h3>
+        
+                <p class="lead mb-3">
+                    Bridging business strategy and technical data solutions.
+                </p>
+        
+                <p class="mb-4">
+                    I design and develop data-driven solutions that transform complex datasets 
+                    into measurable business impact — from SQL modeling to Python analytics 
+                    and cloud-based implementations.
+                </p>
+        
+                <a href="https://github.com/SeaCedric" target="_blank" class="btn btn-dark me-2">
+                    GitHub
+                </a>
+        
+                <a href="https://linkedin.com/in/cedricblanes" target="_blank" class="btn btn-dark me-2">
+                    LinkedIn
+                </a>
+        
+                <a href="documents/cedric_blanes_resume_eng.pdf" 
+                   target="_blank" 
+                   class="btn btn-outline-secondary me-2">
+                   🇬🇧 Resume
+                </a>
+        
+                <a href="documents/cedric_blanes_resume_ch_eng.pdf" 
+                   target="_blank" 
+                   class="btn btn-secondary me-2">
+                   🇨🇭 Resume
+                </a>
+        
+                <a href="documents/cedric_blanes_resume_fr.pdf" 
+                   target="_blank" 
+                   class="btn btn-outline-secondary">
+                   🇫🇷 CV
+                </a>
 
-            <h3 class="mb-3 text-muted">
-                Business & Data Analytics Engineer
-            </h3>
-
-            <p class="lead mb-3">
-                Bridging business strategy and technical data solutions.
-            </p>
-
-            <p class="mb-4">
-                I design and develop data-driven solutions that transform complex datasets 
-                into measurable business impact — from SQL modeling to Python analytics 
-                and cloud-based implementations.
-            </p>
-
-            <a href="https://github.com/SeaCedric" target="_blank" class="btn btn-dark me-2">
-                GitHub
-            </a>
-
-            <a href="https://linkedin.com/in/cedricblanes" target="_blank" class="btn btn-dark me-2">
-                LinkedIn
-            </a>
-
-            <a href="documents/cedric_blanes_resume_eng.pdf" 
-               target="_blank" 
-               class="btn btn-outline-secondary me-2">
-               🇬🇧 Resume
-            </a>
-
-            <a href="documents/cedric_blanes_resume_ch_eng.pdf" 
-               target="_blank" 
-               class="btn btn-secondary me-2">
-               🇨🇭 Resume
-            </a>
-
-            <a href="documents/cedric_blanes_resume_fr.pdf" 
-               target="_blank" 
-               class="btn btn-outline-secondary">
-               🇫🇷 CV
-            </a>
-
-        </div>
+            </div>
+        </div>        
     </div>
 </div>
 
