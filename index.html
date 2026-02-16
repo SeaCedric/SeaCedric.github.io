@@ -10,35 +10,21 @@
 
     <style>
 
+        /* GLOBAL */
         body {
             scroll-behavior: smooth;
+            background-color: #f5f7fa;
         }
 
-        /* Buttons animation */
-        .btn {
-            transition: all 0.2s ease;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-
-        /* Better mobile padding */
         .container {
             padding-left: 24px;
             padding-right: 24px;
         }
 
-        @media (max-width: 576px) {
-            .container {
-                padding-left: 28px;
-                padding-right: 28px;
-            }
-        }
-
         @media (max-width: 768px) {
-            .hero .col-md-7 {
-                text-align: left;
+            .container {
+                padding-left: 32px !important;
+                padding-right: 32px !important;
             }
         }
 
@@ -59,9 +45,20 @@
             }
         }
 
-        /* Sections */
+        .hero-text {
+            max-width: 560px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-text {
+                max-width: 100%;
+            }
+        }
+
+        /* SECTIONS */
         .section {
             padding: 80px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.03);
         }
 
         @media (max-width: 768px) {
@@ -70,26 +67,36 @@
             }
         }
 
-        /* Profile image */
+        /* PROFILE IMAGE */
         .profile-img {
             width: 260px;
             height: 260px;
             object-fit: cover;
             object-position: 50% 20%;
             border-radius: 50%;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
             border: 4px solid white;
         }
 
-        /* Cards */
+        /* BUTTONS */
+        .btn {
+            transition: all 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* CARDS */
         .card {
-            border-radius: 12px;
+            border-radius: 14px;
+            background-color: #ffffff;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
         }
 
         .card img {
@@ -100,7 +107,7 @@
             padding: 1.8rem !important;
         }
 
-        /* Fade in animation */
+        /* FADE-IN */
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
@@ -110,32 +117,6 @@
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
-        }
-
-        /* Limit hero text width for better readability */
-        .hero-text {
-            max-width: 560px;
-        }
-
-        /* Improve spacing on mobile */
-        @media (max-width: 768px) {
-            .hero-text {
-                max-width: 100%;
-            }
-        }
-
-        /* Force comfortable mobile padding */
-        @media (max-width: 768px) {
-            .container,
-            .container-lg {
-                padding-left: 32px !important;
-                padding-right: 32px !important;
-            }
-        }
-
-        /* Soft background sections */
-        .bg-soft {
-            background-color: #f5f7fa;
         }
 
     </style>
@@ -181,21 +162,15 @@
                     LinkedIn
                 </a>
         
-                <a href="documents/cedric_blanes_resume_eng.pdf" 
-                   target="_blank" 
-                   class="btn btn-outline-secondary me-2">
+                <a href="documents/cedric_blanes_resume_eng.pdf" target="_blank" class="btn btn-outline-secondary me-2">
                    🇬🇧 Resume
                 </a>
         
-                <a href="documents/cedric_blanes_resume_ch_eng.pdf" 
-                   target="_blank" 
-                   class="btn btn-outline-secondary me-2">
+                <a href="documents/cedric_blanes_resume_ch_eng.pdf" target="_blank" class="btn btn-outline-secondary me-2">
                    🇨🇭 Resume
                 </a>
         
-                <a href="documents/cedric_blanes_resume_fr.pdf" 
-                   target="_blank" 
-                   class="btn btn-outline-secondary me-2">
+                <a href="documents/cedric_blanes_resume_fr.pdf" target="_blank" class="btn btn-outline-secondary">
                    🇫🇷 CV
                 </a>
 
@@ -205,7 +180,7 @@
 </div>
 
 <!-- SKILLS -->
-<div class="container section fade-in bg-soft">
+<div class="container section fade-in">
     <h2 class="mb-4">Core Skills</h2>
     <ul>
         <li>Advanced SQL modeling & performance optimization</li>
@@ -219,7 +194,6 @@
 <div class="container section fade-in">
     <h2 class="mb-5">Selected Projects</h2>
 
-    <!-- Project 1 -->
     <div class="card shadow-sm mb-5 overflow-hidden fade-in">
         <img src="images/project-operations-2025.webp"
              alt="Weekly Delivery Performance 2025"
@@ -228,11 +202,8 @@
 
         <div class="p-4">
             <h4 class="mb-3">🚚 Operational Performance & Logistics Optimization</h4>
-
             <p><strong>Context:</strong> Multi-city food delivery operations handling millions of orders.</p>
-
             <p><strong>Challenge:</strong> Reduce delivery delays, improve driver utilization and optimize dispatch allocation.</p>
-
             <p><strong>Stack:</strong> SQL • Python • MongoDB • Metabase</p>
 
             <a href="https://github.com/SeaCedric/operational-performance-optimization" 
@@ -243,11 +214,9 @@
         </div>
     </div>
 
-    <!-- Project 2 -->
     <div class="card shadow-sm mb-5 p-4 fade-in">
         <h4 class="mb-3">📉 Customer Retention & Churn Analysis</h4>
         <p>Customer segmentation, churn identification and behavioral analysis to improve retention strategy.</p>
-
         <p><strong>Stack:</strong> SQL • Python • Cohort analysis</p>
 
         <a href="https://github.com/SeaCedric/projet-churn" 
@@ -259,12 +228,11 @@
 </div>
 
 <!-- CONTACT -->
-<div class="container section text-center fade-in bg-soft">
+<div class="container section text-center fade-in">
     <h2>Contact</h2>
     <p>Email: cedric.blanes@live.fr</p>
 </div>
 
-<!-- Fade-in Script (Correctly placed at end) -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     const elements = document.querySelectorAll('.fade-in');
