@@ -13,12 +13,30 @@
             scroll-behavior: smooth;
         }
 
+        .container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+
         .hero {
             padding: 100px 0;
         }
 
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 0;
+            }
+        }
+
         .section {
             padding: 80px 0;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 60px 0;
+            }
         }
 
         .profile-img {
@@ -34,13 +52,22 @@
         .card img {
             border-bottom: 1px solid #eee;
         }
+
+        .card {
+            border-radius: 12px;
+        }
+
+        .card .p-4 {
+            padding: 1.8rem !important;
+        }
+
     </style>
 </head>
 
 <body>
 
 <!-- HERO -->
-<div class="container hero">
+<div class="container-lg hero">
     <div class="row align-items-center">
 
         <div class="col-md-5 text-center mb-4 mb-md-0">
