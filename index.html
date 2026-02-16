@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cédric Blanes | Business & Data Analytics Engineer</title>
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Google Analytics -->
@@ -40,6 +40,12 @@
         /* HERO */
         .hero {
             padding: 100px 0;
+            animation: fadeHero 1s ease;
+        }
+
+        @keyframes fadeHero {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         @media (max-width: 768px) {
@@ -76,14 +82,14 @@
             }
         }
 
-        /* PROFILE IMAGE */
+        /* PROFILE */
         .profile-img {
             width: 260px;
             height: 260px;
             object-fit: cover;
             object-position: 50% 20%;
             border-radius: 50%;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
             border: 4px solid white;
             transition: transform 0.6s ease;
         }
@@ -110,7 +116,7 @@
 
         .card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
         }
 
         .card img {
@@ -133,7 +139,7 @@
             transform: translateY(0);
         }
 
-        /* STAGGER ANIMATION */
+        /* STAGGER */
         .stagger > * {
             opacity: 0;
             transform: translateY(15px);
@@ -168,46 +174,27 @@
 
         <div class="col-md-7">
             <div class="hero-text">
-        
                 <h1 class="fw-bold mb-2">Cédric Blanes</h1>
-        
-                <h3 class="mb-3 text-muted">
-                    Business & Data Analytics Engineer
-                </h3>
-        
+                <h3 class="mb-3 text-muted">Business & Data Analytics Engineer</h3>
+
                 <p class="lead mb-3">
                     Bridging business strategy and technical data solutions.
                 </p>
-        
-                <p class="mb-4">
-                    I design scalable analytical solutions that bridge technical data systems 
-                    and business decision-making. Combining advanced analytics, cloud data platforms, 
-                    and cross-functional collaboration, I help organizations turn complex datasets 
-                    into measurable strategic impact.
-                </p>
-        
-                <a href="https://github.com/SeaCedric" target="_blank" class="btn btn-dark me-2">
-                    GitHub
-                </a>
-        
-                <a href="https://linkedin.com/in/cedricblanes" target="_blank" class="btn btn-dark me-2">
-                    LinkedIn
-                </a>
-        
-                <a href="documents/cedric_blanes_resume_eng.pdf" target="_blank" class="btn btn-outline-secondary me-2">
-                   🇬🇧 Resume
-                </a>
-        
-                <a href="documents/cedric_blanes_resume_ch_eng.pdf" target="_blank" class="btn btn-outline-secondary me-2">
-                   🇨🇭 Resume
-                </a>
-        
-                <a href="documents/cedric_blanes_resume_fr.pdf" target="_blank" class="btn btn-outline-secondary">
-                   🇫🇷 Resume
-                </a>
 
+                <p class="mb-4">
+                    I design scalable analytical solutions that connect complex data environments 
+                    with strategic decision-making. By combining advanced analytics, cloud platforms, 
+                    and automation, I help organizations turn data into measurable impact.
+                </p>
+
+                <a href="https://github.com/SeaCedric" target="_blank" class="btn btn-dark me-2">GitHub</a>
+                <a href="https://linkedin.com/in/cedricblanes" target="_blank" class="btn btn-dark me-2">LinkedIn</a>
+                <a href="documents/cedric_blanes_resume_eng.pdf" target="_blank" class="btn btn-outline-secondary me-2">🇬🇧 Resume</a>
+                <a href="documents/cedric_blanes_resume_ch_eng.pdf" target="_blank" class="btn btn-outline-secondary me-2">🇨🇭 Resume</a>
+                <a href="documents/cedric_blanes_resume_fr.pdf" target="_blank" class="btn btn-outline-secondary">🇫🇷 Resume</a>
             </div>
-        </div>        
+        </div>
+
     </div>
 </div>
 
@@ -224,20 +211,63 @@
 
         <div class="col-md-6 mb-4">
             <h5>Cloud & Data Warehousing</h5>
-            <p>Working with BigQuery, Snowflake, PostgreSQL, and modern cloud environments to build reliable analytical foundations.</p>
+            <p>BigQuery, Snowflake, PostgreSQL, and modern cloud data environments.</p>
         </div>
 
         <div class="col-md-6 mb-4">
             <h5>Python & Automation</h5>
-            <p>Data processing, scripting, automation workflows, and analytical tooling supporting operational and business performance.</p>
+            <p>Scripting, data processing pipelines, and automation workflows supporting scalable analytics.</p>
         </div>
 
         <div class="col-md-6 mb-4">
             <h5>Business Performance Analysis</h5>
-            <p>KPI development, operational diagnostics, cross-functional collaboration, and data-driven decision support.</p>
+            <p>KPI development, operational diagnostics, and data-driven decision support.</p>
         </div>
 
     </div>
+</div>
+
+<!-- PROJECTS -->
+<div class="container section fade-in">
+    <h2 class="mb-5">Selected Projects</h2>
+
+    <div class="card shadow-sm mb-5 overflow-hidden fade-in">
+        <img src="images/project-operations-2025.webp"
+             alt="Weekly Delivery Performance 2025"
+             class="img-fluid"
+             loading="lazy">
+
+        <div class="p-4">
+            <h4 class="mb-3">🚚 Operational Performance & Logistics Optimization</h4>
+            <p><strong>Context:</strong> Multi-city food delivery operations handling millions of orders.</p>
+            <p><strong>Challenge:</strong> Reduce delivery delays and improve driver utilization.</p>
+            <p><strong>Stack:</strong> SQL • Python • MongoDB • Metabase</p>
+
+            <a href="https://github.com/SeaCedric/operational-performance-optimization" 
+               target="_blank" 
+               class="btn btn-outline-dark btn-sm mt-2">
+               View on GitHub
+            </a>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mb-5 p-4 fade-in">
+        <h4 class="mb-3">📉 Customer Retention & Churn Analysis</h4>
+        <p>Customer segmentation and behavioral analysis to improve retention strategy.</p>
+        <p><strong>Stack:</strong> SQL • Python • Cohort analysis</p>
+
+        <a href="https://github.com/SeaCedric/projet-churn" 
+           target="_blank" 
+           class="btn btn-outline-dark btn-sm mt-2">
+           View on GitHub
+        </a>
+    </div>
+</div>
+
+<!-- CONTACT -->
+<div class="container section text-center fade-in">
+    <h2>Contact</h2>
+    <p>Email: cedric.blanes@live.fr</p>
 </div>
 
 <script>
