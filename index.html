@@ -14,6 +14,7 @@
             scroll-behavior: smooth;
         }
 
+        /* Buttons animation */
         .btn {
             transition: all 0.2s ease;
         }
@@ -22,12 +23,13 @@
             transform: translateY(-2px);
         }
 
+        /* Better mobile padding */
         .container {
             padding-left: 20px;
             padding-right: 20px;
         }
 
-
+        /* HERO */
         .hero {
             padding: 100px 0;
         }
@@ -36,8 +38,15 @@
             .hero {
                 padding: 60px 0;
             }
+
+            .hero .btn {
+                display: block;
+                width: 100%;
+                margin-bottom: 10px;
+            }
         }
 
+        /* Sections */
         .section {
             padding: 80px 0;
         }
@@ -48,6 +57,7 @@
             }
         }
 
+        /* Profile image */
         .profile-img {
             width: 260px;
             height: 260px;
@@ -58,10 +68,7 @@
             border: 4px solid white;
         }
 
-        .card img {
-            border-bottom: 1px solid #eee;
-        }
-
+        /* Cards */
         .card {
             border-radius: 12px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -72,10 +79,15 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
         }
 
+        .card img {
+            border-bottom: 1px solid #eee;
+        }
+
         .card .p-4 {
             padding: 1.8rem !important;
         }
 
+        /* Fade in animation */
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
@@ -90,21 +102,6 @@
     </style>
 </head>
 
-<script>
-    const elements = document.querySelectorAll('.fade-in');
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    });
-
-    elements.forEach(el => observer.observe(el));
-</script>
-
-
 <body>
 
 <!-- HERO -->
@@ -112,9 +109,10 @@
     <div class="row align-items-center">
 
         <div class="col-md-5 text-center mb-4 mb-md-0">
-            <img src="images/cedric-blanes.PNG" 
+            <img src="images/cedric-blanes.webp" 
                  alt="Cédric Blanes" 
-                 class="profile-img">
+                 class="profile-img"
+                 loading="lazy">
         </div>
 
         <div class="col-md-7">
@@ -143,31 +141,29 @@
             </a>
 
             <a href="documents/cedric_blanes_resume_eng.pdf" 
-                target="_blank" 
-                class="btn btn-outline-secondary me-2">
-                🇬🇧 Resume
+               target="_blank" 
+               class="btn btn-outline-secondary me-2">
+               🇬🇧 Resume
             </a>
 
             <a href="documents/cedric_blanes_resume_ch_eng.pdf" 
-                target="_blank" 
-                class="btn btn-secondary">
-                🇨🇭 Resume
+               target="_blank" 
+               class="btn btn-secondary me-2">
+               🇨🇭 Resume
             </a>
-     
+
             <a href="documents/cedric_blanes_resume_fr.pdf" 
-                target="_blank" 
-                class="btn btn-outline-secondary me-2">
-                🇫🇷 CV
+               target="_blank" 
+               class="btn btn-outline-secondary">
+               🇫🇷 CV
             </a>
 
         </div>
-
     </div>
 </div>
 
-<!-- COMPÉTENCES -->
+<!-- SKILLS -->
 <div class="container section fade-in">
-
     <h2 class="mb-4">Core Skills</h2>
     <ul>
         <li>Advanced SQL modeling & performance optimization</li>
@@ -179,15 +175,14 @@
 
 <!-- PROJECTS -->
 <div class="container section fade-in">
-
     <h2 class="mb-5">Selected Projects</h2>
 
-    <!-- PROJECT 1 -->
-    <div class="card shadow-sm mb-5 overflow-hidden">
-
-        <img src="images/project-operations-2025.png"
+    <!-- Project 1 -->
+    <div class="card shadow-sm mb-5 overflow-hidden fade-in">
+        <img src="images/project-operations-2025.webp"
              alt="Weekly Delivery Performance 2025"
-             class="img-fluid">
+             class="img-fluid"
+             loading="lazy">
 
         <div class="p-4">
             <h4 class="mb-3">🚚 Operational Performance & Logistics Optimization</h4>
@@ -206,8 +201,8 @@
         </div>
     </div>
 
-    <!-- PROJECT 2 -->
-    <div class="card shadow-sm mb-5 p-4">
+    <!-- Project 2 -->
+    <div class="card shadow-sm mb-5 p-4 fade-in">
         <h4 class="mb-3">📉 Customer Retention & Churn Analysis</h4>
         <p>Customer segmentation, churn identification and behavioral analysis to improve retention strategy.</p>
 
@@ -219,14 +214,30 @@
            View on GitHub
         </a>
     </div>
-
 </div>
 
 <!-- CONTACT -->
-<div class="container section text-center">
+<div class="container section text-center fade-in">
     <h2>Contact</h2>
     <p>Email: cedric.blanes@live.fr</p>
 </div>
+
+<!-- Fade-in Script (Correctly placed at end) -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    });
+
+    elements.forEach(el => observer.observe(el));
+});
+</script>
 
 </body>
 </html>
