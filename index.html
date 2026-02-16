@@ -25,8 +25,21 @@
 
         /* Better mobile padding */
         .container {
-            padding-left: 20px;
-            padding-right: 20px;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding-left: 28px;
+                padding-right: 28px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero .col-md-7 {
+                text-align: left;
+            }
         }
 
         /* HERO */
@@ -105,7 +118,7 @@
 <body>
 
 <!-- HERO -->
-<div class="container-lg hero">
+<div class="container hero">
     <div class="row align-items-center">
 
         <div class="col-md-5 text-center mb-4 mb-md-0">
