@@ -85,6 +85,11 @@
             border-radius: 50%;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
             border: 4px solid white;
+            transition: transform 0.6s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.03);
         }
 
         /* BUTTONS */
@@ -128,6 +133,23 @@
             transform: translateY(0);
         }
 
+        /* STAGGER ANIMATION */
+        .stagger > * {
+            opacity: 0;
+            transform: translateY(15px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .stagger.visible > * {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stagger.visible > *:nth-child(1) { transition-delay: 0.1s; }
+        .stagger.visible > *:nth-child(2) { transition-delay: 0.2s; }
+        .stagger.visible > *:nth-child(3) { transition-delay: 0.3s; }
+        .stagger.visible > *:nth-child(4) { transition-delay: 0.4s; }
+
     </style>
 </head>
 
@@ -163,7 +185,6 @@
                     and cross-functional collaboration, I help organizations turn complex datasets 
                     into measurable strategic impact.
                 </p>
-                    
         
                 <a href="https://github.com/SeaCedric" target="_blank" class="btn btn-dark me-2">
                     GitHub
@@ -194,78 +215,34 @@
 <div class="container section fade-in">
     <h2 class="mb-5">Core Expertise</h2>
 
-    <div class="row">
+    <div class="row stagger">
 
         <div class="col-md-6 mb-4">
-            <h5>Data Analytics & Modeling</h5>
-            <p>Advanced SQL analytics, lifecycle modeling, large-scale dataset exploration, and structured analytical frameworks.</p>
+            <h5>SQL & Data Structuring</h5>
+            <p>Complex querying, dataset structuring, performance optimization, and analytical transformations on large-scale data.</p>
         </div>
 
         <div class="col-md-6 mb-4">
-            <h5>Cloud & Data Platforms</h5>
-            <p>BigQuery, Snowflake, PostgreSQL, MongoDB — cloud data warehousing and scalable analytical environments.</p>
+            <h5>Cloud & Data Warehousing</h5>
+            <p>Working with BigQuery, Snowflake, PostgreSQL, and modern cloud environments to build reliable analytical foundations.</p>
         </div>
 
         <div class="col-md-6 mb-4">
-            <h5>Python & Analytical Engineering</h5>
-            <p>Pandas-driven analysis, automation workflows, exploratory modeling, and performance diagnostics.</p>
+            <h5>Python & Automation</h5>
+            <p>Data processing, scripting, automation workflows, and analytical tooling supporting operational and business performance.</p>
         </div>
 
         <div class="col-md-6 mb-4">
-            <h5>Business Intelligence & Decision Support</h5>
-            <p>KPI frameworks, dashboard design, cross-functional collaboration, and data-driven strategic alignment.</p>
+            <h5>Business Performance Analysis</h5>
+            <p>KPI development, operational diagnostics, cross-functional collaboration, and data-driven decision support.</p>
         </div>
 
     </div>
-</div>
-
-
-<!-- PROJECTS -->
-<div class="container section fade-in">
-    <h2 class="mb-5">Selected Projects</h2>
-
-    <div class="card shadow-sm mb-5 overflow-hidden fade-in">
-        <img src="images/project-operations-2025.webp"
-             alt="Weekly Delivery Performance 2025"
-             class="img-fluid"
-             loading="lazy">
-
-        <div class="p-4">
-            <h4 class="mb-3">🚚 Operational Performance & Logistics Optimization</h4>
-            <p><strong>Context:</strong> Multi-city food delivery operations handling millions of orders.</p>
-            <p><strong>Challenge:</strong> Reduce delivery delays, improve driver utilization and optimize dispatch allocation.</p>
-            <p><strong>Stack:</strong> SQL • Python • MongoDB • Metabase</p>
-
-            <a href="https://github.com/SeaCedric/operational-performance-optimization" 
-               target="_blank" 
-               class="btn btn-outline-dark btn-sm mt-2">
-               View on GitHub
-            </a>
-        </div>
-    </div>
-
-    <div class="card shadow-sm mb-5 p-4 fade-in">
-        <h4 class="mb-3">📉 Customer Retention & Churn Analysis</h4>
-        <p>Customer segmentation, churn identification and behavioral analysis to improve retention strategy.</p>
-        <p><strong>Stack:</strong> SQL • Python • Cohort analysis</p>
-
-        <a href="https://github.com/SeaCedric/projet-churn" 
-           target="_blank" 
-           class="btn btn-outline-dark btn-sm mt-2">
-           View on GitHub
-        </a>
-    </div>
-</div>
-
-<!-- CONTACT -->
-<div class="container section text-center fade-in">
-    <h2>Contact</h2>
-    <p>Email: cedric.blanes@live.fr</p>
 </div>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    const elements = document.querySelectorAll('.fade-in');
+    const elements = document.querySelectorAll('.fade-in, .stagger');
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
