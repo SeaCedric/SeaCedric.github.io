@@ -151,6 +151,48 @@
     
 </div>
 
+<!-- CONTACT -->
+<div class="container section fade-in text-center">
+    <h2>Contact</h2>
+
+    <p class="contact-subtitle">
+        Interested in data collaboration or opportunities in Switzerland? Let’s connect.
+    </p>
+
+    <form id="contact-form" class="contact-form mx-auto">
+
+        <!-- Honeypot anti-spam -->
+        <input type="text" name="_gotcha" style="display:none">
+
+        <div class="input-group">
+            <input type="text" name="name" placeholder="Your name" required>
+        </div>
+
+        <div class="input-group">
+            <input type="email" name="email" placeholder="Your email" required>
+        </div>
+
+        <div class="input-group">
+            <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+        </div>
+
+        <button type="submit" id="submit-btn">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-loader"></span>
+        </button>
+
+        <p id="form-status"></p>
+    </form>
+
+    <div class="mt-4 small text-muted">
+            © 2026 Cédric Blanes. All rights reserved. <br>
+            This website uses Google Analytics to collect anonymous usage statistics.
+        </div>
+
+</div>
+
 <script src="js/main.js"></script>
+<script src="js/contact.js"></script>
+
 </body>
 </html>
