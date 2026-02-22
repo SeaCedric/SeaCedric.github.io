@@ -112,6 +112,7 @@
             border-radius: 14px;
             background-color: #ffffff;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
         }
 
         .card:hover {
@@ -125,6 +126,18 @@
 
         .card .p-4 {
             padding: 1.8rem !important;
+        }
+
+        .project-img {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .project-img {
+            transform: scale(1.05);
         }
 
         /* FADE-IN */
@@ -237,7 +250,7 @@
     <div class="card shadow-sm mb-5 overflow-hidden fade-in">
         <img src="images/project-operations-2025.webp"
              alt="Weekly Delivery Performance 2025"
-             class="img-fluid"
+             class="project-img"
              loading="lazy">
 
         <div class="p-4">
@@ -257,7 +270,7 @@
     <div class="card shadow-sm mb-5 overflow-hidden fade-in">
         <img src="images/project-workplace-risk.webp"
              alt="Workplace risk prediction"
-             class="img-fluid"
+             class="project-img"
              loading="lazy">
 
         <div class="p-4">
