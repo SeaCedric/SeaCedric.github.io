@@ -96,8 +96,16 @@
 <!-- PROJECTS -->
 <div class="container section fade-in">
     <h2 class="mb-5">Selected Projects - Under construction</h2>
+    <div class="text-center mb-4">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="python">Python</button>
+        <button class="filter-btn" data-filter="sql">SQL</button>
+    </div>
 
-    <div class="card shadow-sm mb-5 overflow-hidden fade-in">
+    <div class="card shadow-sm mb-5 overflow-hidden fade-in project-card python sql"
+    data-title="Operational Performance & Logistics Optimization"
+    data-description="Improved delivery performance across multi-city operations by optimizing logistics KPIs and driver utilization."
+    data-github="https://github.com/SeaCedric/operational-performance-analytics">
         <img src="images/project-operations-2025.webp"
              alt="Weekly Delivery Performance 2025"
              class="project-img"
@@ -117,7 +125,10 @@
         </div>
     </div>
 
-    <div class="card shadow-sm mb-5 overflow-hidden fade-in">
+    <div class="card shadow-sm mb-5 overflow-hidden fade-in project-card python"
+     data-title="Workplace Mental Health Risk Prediction"
+     data-description="Designed an interpretable ML model to estimate mental health risk using structured HR survey data."
+     data-github="https://github.com/SeaCedric/workplace-risk-prediction">
         <img src="images/project-workplace-risk.webp"
              alt="Workplace risk prediction"
              class="project-img"
@@ -179,8 +190,18 @@
 
 </div>
 
+<div id="project-modal" class="modal-overlay">
+    <div class="modal-content">
+        <span id="close-modal">&times;</span>
+        <h3 id="modal-title"></h3>
+        <p id="modal-description"></p>
+        <a id="modal-github" target="_blank" class="btn btn-dark mt-3">View on GitHub</a>
+    </div>
+</div>
+
 <script src="js/main.js"></script>
 <script src="js/contact.js"></script>
+<script src="js/projects.js"></script>
 
 </body>
 </html>
