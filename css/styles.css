@@ -223,14 +223,15 @@ body {
 
 
 /* PROJECT FILTERS */
-.filter-btn {
-    border: none;
-    background: #eee;
-    padding: 8px 16px;
+.project-filters .btn {
     margin: 5px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: 0.2s;
+    transition: all 0.2s ease;
+}
+
+.project-filters .btn.active {
+    background-color: #111;
+    color: white;
+    border-color: #111;
 }
 
 .filter-btn.active,
